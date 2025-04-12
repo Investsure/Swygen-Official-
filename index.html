@@ -1,0 +1,390 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swygen Official Bd </title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Urbanist', sans-serif;
+    }
+    body {
+      background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #0d1117;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #00ffff;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100%;
+      width: 260px;
+      background-color: #003153;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 60px 20px;
+      transition: right 0.4s ease-in-out;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 15px 0;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00ffff;
+    }
+    .menu-toggle {
+      font-size: 32px;
+      color: white;
+      cursor: pointer;
+    }
+    .nav-open {
+      right: 0;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 800;
+    }
+    .hero p {
+      margin-top: 15px;
+      font-size: 20px;
+      color: #00ffff;
+    }
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin-top: 30px;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-contact i {
+      margin-right: 10px;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 20px;
+      background: #06293e;
+      text-align: center;
+    }
+    .stats div {
+      font-size: 18px;
+    }
+    .stats h2 {
+      font-size: 28px;
+      color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SWYGEN</div>
+    <span class="menu-toggle material-icons-outlined" onclick="toggleMenu()">menu</span>
+    <nav id="mobileMenu">
+      <span class="menu-toggle material-icons-outlined" onclick="toggleMenu()">close</span>
+      <a href="home.html">Home</a>
+      <a href="police.html">Privacy and Policy</a>
+      <a href="service.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>  <section class="hero">
+    <h1>Swygen is the best place for</h1>
+    <p>Digital IT Services</p>
+    <a href="contact.html" class="btn-contact"><i class="material-icons-outlined">support_agent</i>Contact</a>
+  </section>  <section class="stats">
+    <div>
+      <h2>292+</h2>
+      <p>Happy Client</p>
+    </div>
+    <div>
+      <h2>290+</h2>
+      <p>Finished Project</p>
+    </div>
+    <div>
+      <h2>10+</h2>
+      <p>Skilled Expert</p>
+    </div>
+  </section>  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('nav-open');
+    }
+  </script></body>
+</html>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }body {
+  background: linear-gradient(to right, #e0f7fa, #fff3e0);
+  color: #333;
+}
+
+.service-section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+}
+
+.card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card i {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #007BFF;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+  </style>
+</head>
+<body>
+  <div class="service-section">
+    <div class="card"><i class="fas fa-paint-brush"></i>
+      <h2>Graphics Design</h2>
+      <p>We provide attractive visuals, high credibility, and brand-enhancing graphics that generate more visibility and conversions.</p>
+    </div>
+    <div class="card"><i class="fas fa-mobile-alt"></i>
+      <h2>Android App Development</h2>
+      <p>Our expert team delivers custom Android apps with deep research to meet all your specific requirements and goals.</p>
+    </div>
+    <div class="card"><i class="fas fa-code"></i>
+      <h2>Web Design and Development</h2>
+      <p>We develop modern, responsive websites and admin panels with complete control over content and design.</p>
+    </div>
+    <div class="card"><i class="fas fa-video"></i>
+      <h2>Video Editing</h2>
+      <p>Professional editing for YouTube, Business, Promotional content, and more to turn your viewers into customers.</p>
+    </div>
+    <div class="card"><i class="fas fa-bullhorn"></i>
+      <h2>Digital Marketing</h2>
+      <p>We empower small and mid-size businesses to grow through tailored digital marketing strategies.</p>
+    </div>
+    <div class="card"><i class="fas fa-headset"></i>
+      <h2>Support / IT</h2>
+      <p>We offer fast and reliable IT support and services to ensure your systems run smoothly and efficiently.</p>
+    </div>
+  </div>  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        } else {
+          entry.target.classList.remove('animate');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+  </script></body>
+</html>
+<div class="custom-rating-box">
+  <div class="rating-title">User Rating</div>
+  <div class="stars">
+    <i class="fas fa-star full"></i>
+    <i class="fas fa-star full"></i>
+    <i class="fas fa-star full"></i>
+    <i class="fas fa-star full"></i>
+    <i class="fas fa-star-half-alt half"></i>
+  </div>
+  <div class="rating-number">4.8 out of 5</div>
+</div>
+
+<!-- Styles -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+.custom-rating-box {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(145deg, #141e30, #243b55);
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 20px;
+  max-width: 300px;
+  margin: 40px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  position: relative;
+}
+
+.rating-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #00f7ff;
+}
+
+.stars {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.stars i {
+  color: #ffd700;
+  margin: 0 3px;
+  transition: transform 0.3s ease;
+}
+
+.stars i:hover {
+  transform: scale(1.2);
+}
+
+.rating-number {
+  font-size: 16px;
+  color: #cce7ff;
+}
+</style>
+<footer class="custom-footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="swygenofficial@gmail.com">info@swygen.com</a></p>
+      <p>Phone: <a href="tel:+09638487031">+09638487031</a></p>
+    </div>
+    <div class="footer-social">
+      <h2>Follow Us</h2>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Swygen Official. All rights reserved.</p>
+  </div>
+</footer><!-- Custom Footer CSS --><style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+.custom-footer {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 60px 20px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 99;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+}
+.footer-info h2,
+.footer-social h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+.footer-info a,
+.footer-info p {
+  color: #cce7ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-info a:hover {
+  color: #00f7ff;
+}
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.social-icon {
+  color: #cce7ff;
+  font-size: 24px;
+  transition: 0.3s;
+}
+.social-icon:hover {
+  color: #00f7ff;
+  transform: scale(1.2);
+}
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+</style>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Swygen Premium+</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 50px 20px;
+    }
+
+    .logo {
+      margin-bottom: 30px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fbc02d);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #fbc02d;
+      text-shadow: 0 0 15px rgba(251,192,45,0.4);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(251, 192, 45, 0.2);
+    }
+
+    .material-icons-outlined {
+      font-size: 42px;
+      color: #fbc02d;
+      margin-bottom: 15px;
+    }
+
+    .card span {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .back-button {
+      margin-top: 50px;
+      background: #fbc02d;
+      color: #1a1a1a;
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(251, 192, 45, 0.4);
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: #ffd54f;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #ccc;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .card span {
+        font-size: 16px;
+      }
+
+      .material-icons-outlined {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="https://assets.onecompiler.app/43ea4pg72/43ejdw4bt/Grey%20Yellow%20Minimalist%20Software%20Development%20Logo.png" alt="Swygen Logo" />
+  </div>
+
+  <h1>Services by Swygen</h1>
+
+  <div class="services">
+    <div class="card">
+      <span class="material-icons-outlined">android</span>
+      <span>Android App Development</span>
+    </div>
+    <div class="card">
+      <span class="material-icons-outlined">web</span>
+      <span>Web Design & Development</span>
+    </div>
+    <div class="card">
+      <span class="material-icons-outlined">video_call</span>
+      <span>Video Editing</span>
+    </div>
+    <div class="card">
+      <span class="material-icons-outlined">campaign</span>
+      <span>Digital Marketing</span>
+    </div>
+    <div class="card">
+      <span class="material-icons-outlined">support_agent</span>
+      <span>Support / IT</span>
+    </div>
+  </div>
+
+  <a class="back-button" href="index.html">Back</a>
+
+  <footer>
+    © 2025 Swygen Official. All rights reserved.
+  </footer>
+
+</body>
+</html>
